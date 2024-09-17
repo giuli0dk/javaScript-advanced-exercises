@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate the DOM</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        /*
+        Stampa in ordine in console:
+
+        l'elemento padre di ul.
+        il secondo elemento figlio di ul.
+        l'elemento fratello successivo del secondo li.
+        l'elemento fratello precedente del secondo li.
+        */ 
+
+        const ul = document.body.children[0]
+        const myLi = ul.children[1]
+        const nextLi = myLi.nextElementSibling;
+        const prevLi = myLi.previousElementSibling;
+
+        console.log(ul)
+        console.log(myLi)
+        console.log(nextLi)
+        console.log(prevLi)
+        
+    </script>
+</body>
+
+</html>
